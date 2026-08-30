@@ -1,5 +1,12 @@
 <p align="center">
-  <img src="./assets/flare-im-logo-lockup.svg" alt="Flare IM" width="190" />
+  <img src="./assets/flare-im-logo-mark.svg" alt="Flare IM logo mark" width="68" />
+</p>
+
+<h1 align="center">flare.im</h1>
+
+<p align="center">
+  <strong>Realtime messaging infrastructure with one Rust behavior core and native SDK surfaces.</strong><br />
+  一套以 Rust Core 为中心的即时通讯基础设施: 服务端微服务、客户端引擎、七端 SDK、跨端 UI Kit。
 </p>
 
 <p align="center">
@@ -7,34 +14,39 @@
 </p>
 
 <p align="center">
-  <strong>One realtime core. Native SDK surfaces. Product rules stay above the wire.</strong><br />
-  业务中立的即时通讯基础设施: Rust 单核心、七端 SDK、跨端 UI Kit、可组合社交业务层。
+  <a href="https://github.com/flare-im/flare-core">Transport</a>
+  ·
+  <a href="https://github.com/flare-im/flare-im-core-server">Server</a>
+  ·
+  <a href="https://github.com/flare-im/flare-im-core-sdk">Client core</a>
+  ·
+  <a href="https://github.com/flare-im/flare-im-core-client-sdk">SDKs</a>
+  ·
+  <a href="https://github.com/flare-im/flare-im-design">Design</a>
 </p>
 
-<p align="center">
-  <a href="https://github.com/flare-im/flare-im-core-server">Core server</a>
-  ·
-  <a href="https://github.com/flare-im/flare-im-core-sdk">Rust client engine</a>
-  ·
-  <a href="https://github.com/flare-im/flare-im-core-client-sdk">Client SDKs</a>
-  ·
-  <a href="https://github.com/flare-im/flare-im-design">UI kit</a>
-</p>
+## Organization Focus
 
-## The Shape Of The System
+Flare IM is building a reusable instant messaging stack where the realtime behavior is implemented once, tested close to the core, and exposed through platform-native SDKs. Product-specific social features, plugin capabilities, and app choices live above the core instead of leaking into transport or protocol contracts.
 
-Flare IM is a full-stack instant messaging platform for teams that need the realtime layer to stay clean, inspectable, and portable. The core carries messaging behavior; platform packages adapt it; product features stay above it.
+The current project is organized around a few firm boundaries:
 
-That boundary is the point of the project.
+- **Transport stays reusable**: connection management, QUIC/WebSocket paths, and service discovery live below product semantics.
+- **Contracts are explicit**: proto, bindings, and SDK specs define typed boundaries before platform packages adapt them.
+- **Client behavior is shared**: send reliability, sync recovery, ordering, storage policy, and lifecycle behavior belong in the Rust client engine.
+- **UI remains portable**: design tokens and IM components give the example apps a consistent interface language without making UI rules part of the core.
+- **Business layers compose on top**: social, community, enterprise, and plugin features stay outside the business-neutral IM foundation.
 
-| Boundary | What Lives There | Public Entry Point |
+## System Map
+
+| Layer | Public Repository | Responsibility |
 | --- | --- | --- |
-| Wire | QUIC/WebSocket transport, connection foundations, service discovery | [flare-core](https://github.com/flare-im/flare-core) |
-| Contract | DDD/CQRS protocol contracts and generated surfaces | [flare-proto](https://github.com/flare-im/flare-proto), [flare-grpc-proto](https://github.com/flare-im/flare-grpc-proto) |
-| Server | Messaging, session, sync, storage, media, delivery, and fanout services | [flare-im-core-server](https://github.com/flare-im/flare-im-core-server) |
-| Client core | Reliable send, sync convergence, ordering, local state, native/web runtime behavior | [flare-im-core-sdk](https://github.com/flare-im/flare-im-core-sdk) |
-| SDK surface | TypeScript, Swift, Kotlin, Dart, Flutter, HarmonyOS, and example app packages | [flare-im-core-client-sdk](https://github.com/flare-im/flare-im-core-client-sdk) |
-| Experience | Cross-platform IM components, shared tokens, and native UI implementations | [flare-im-design](https://github.com/flare-im/flare-im-design) |
+| Wire | [flare-core](https://github.com/flare-im/flare-core) | Transport foundations for QUIC/WebSocket connections and service discovery. |
+| Contract | [flare-proto](https://github.com/flare-im/flare-proto), [flare-grpc-proto](https://github.com/flare-im/flare-grpc-proto) | Protocol contracts for DDD/CQRS services and generated integration surfaces. |
+| Server | [flare-im-core-server](https://github.com/flare-im/flare-im-core-server) | Messaging, session, sync, storage, media, delivery, and fanout services. |
+| Client core | [flare-im-core-sdk](https://github.com/flare-im/flare-im-core-sdk) | Rust client engine for reliable send, sync convergence, ordering, and local state. |
+| SDK surface | [flare-im-core-client-sdk](https://github.com/flare-im/flare-im-core-client-sdk) | TypeScript, Swift, Kotlin, Dart, Flutter, HarmonyOS, and example app packages. |
+| Experience | [flare-im-design](https://github.com/flare-im/flare-im-design) | Cross-platform IM UI kit, shared tokens, and native component implementations. |
 
 ## Start By Intent
 
@@ -52,6 +64,7 @@ That boundary is the point of the project.
 
 - **Neutral core**: IM infrastructure stays independent from social, community, or enterprise product policy.
 - **One behavior source**: shared realtime behavior belongs in the Rust client engine, not in every platform app.
+- **Narrow waist**: generated SDK surfaces cross a small, stable runtime boundary instead of duplicating platform logic.
 - **Typed contracts first**: protocol and SDK surfaces use explicit fields, enums, and generated contracts.
 - **Production paths only**: pre-release work favors one clean implementation path over compatibility shims.
 - **Measured realtime quality**: latency, ordering, backpressure, retry, and sync recovery are first-class design concerns.
