@@ -1,8 +1,10 @@
 <p align="center">
-  <img src="./assets/flare-im-system-map.svg" alt="Flare IM protocol weave" width="100%" />
+  <img src="./assets/flare-im-logo-lockup.svg" alt="Flare IM" width="190" />
 </p>
 
-<h1 align="center">flare.im</h1>
+<p align="center">
+  <img src="./assets/flare-im-system-map.svg" alt="Flare IM protocol weave" width="100%" />
+</p>
 
 <p align="center">
   <strong>One realtime core. Native SDK surfaces. Product rules stay above the wire.</strong><br />

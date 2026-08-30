@@ -1,16 +1,16 @@
 <svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Flare IM protocol weave</title>
-  <desc id="desc">A distinctive system map for Flare IM showing message packets moving through UI, SDK, Rust core, contracts, server fanout, and transport boundaries.</desc>
+  <desc id="desc">A distinctive system map for Flare IM showing a slanted gradient F mark and message packets moving through UI, SDK, Rust core, contracts, server fanout, and transport boundaries.</desc>
   <defs>
     <linearGradient id="paper" x1="70" y1="20" x2="1100" y2="500" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#F8FAFF"/>
       <stop offset="0.56" stop-color="#EEF6F6"/>
       <stop offset="1" stop-color="#F7F3EE"/>
     </linearGradient>
-    <linearGradient id="identity" x1="88" y1="78" x2="238" y2="228" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#D86EF2"/>
-      <stop offset="0.52" stop-color="#7A5CFF"/>
-      <stop offset="1" stop-color="#20D5C5"/>
+    <linearGradient id="brand-mark" x1="104" y1="96" x2="150" y2="148" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5EEBFF"/>
+      <stop offset="0.45" stop-color="#4098FF"/>
+      <stop offset="1" stop-color="#9B5CFF"/>
     </linearGradient>
     <linearGradient id="packet" x1="190" y1="306" x2="1016" y2="306" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#7A5CFF"/>
@@ -22,6 +22,7 @@
       <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#172033" flood-opacity="0.16"/>
     </filter>
     <style>
+      .logo-word { fill: #F7FAFF; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 25px; font-weight: 760; letter-spacing: 0; }
       .display { fill: #172033; font-family: "Avenir Next Condensed", "Arial Narrow", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 72px; font-weight: 800; letter-spacing: 0; }
       .lead { fill: #2A3545; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 24px; font-weight: 650; }
       .caption { fill: #607083; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14px; font-weight: 600; }
@@ -52,18 +53,18 @@
   <path d="M104 380C178 318 250 352 316 296C390 234 454 254 526 302C604 354 668 354 746 298C826 240 890 224 970 268C1038 306 1082 292 1120 254" stroke="url(#packet)" stroke-width="4" stroke-linecap="round"/>
 
   <g filter="url(#soft-shadow)">
-    <rect x="72" y="72" width="156" height="156" rx="36" fill="url(#identity)"/>
-    <rect x="108" y="106" width="34" height="34" fill="#F6DCFF"/>
-    <rect x="166" y="106" width="34" height="34" fill="#F6DCFF"/>
-    <rect x="108" y="152" width="92" height="34" fill="#F6DCFF"/>
-    <rect x="128" y="196" width="54" height="14" fill="#F6DCFF"/>
+    <rect x="72" y="78" width="220" height="78" rx="14" fill="#07152D"/>
+    <path d="M112 102H145" stroke="url(#brand-mark)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M112 102L102 148" stroke="url(#brand-mark)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M108 124H134" stroke="url(#brand-mark)" stroke-width="8" stroke-linecap="round"/>
+    <text x="164" y="128" class="logo-word">Flare IM</text>
   </g>
 
-  <text x="268" y="122" class="display">Flare IM</text>
-  <text x="272" y="166" class="lead">Realtime messaging, kept clean at the wire.</text>
-  <text x="272" y="202" class="caption">Rust core / 7 platform SDKs / cross-platform IM UI kit / social layer above infrastructure</text>
+  <text x="336" y="122" class="display">Realtime Core</text>
+  <text x="340" y="166" class="lead">Messaging behavior in Rust. Product rules above the wire.</text>
+  <text x="340" y="202" class="caption">7 platform SDKs / cross-platform IM UI kit / typed contracts / sync recovery</text>
 
-  <g transform="translate(272 236)">
+  <g transform="translate(340 236)">
     <rect x="0" y="0" width="184" height="36" rx="18" fill="#FFFFFF" stroke="#D2DAE5"/>
     <circle cx="22" cy="18" r="5" fill="#7A5CFF"/>
     <text x="38" y="23" class="caption">business-neutral</text>
@@ -110,7 +111,7 @@
     <text x="32" y="96" class="node-note">proto / spec / bindings</text>
   </g>
 
-  <g transform="translate(952 236)">
+  <g transform="translate(952 274)">
     <rect x="0" y="0" width="164" height="122" rx="24" fill="#FFFFFF" stroke="#CFD8E3"/>
     <circle cx="82" cy="54" r="30" fill="#E9F9F4" stroke="#43C981" stroke-width="4"/>
     <circle cx="82" cy="54" r="13" fill="#43C981"/>
