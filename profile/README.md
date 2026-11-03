@@ -57,9 +57,11 @@ The current project is organized around a few firm boundaries:
 | Build against the client SDK contract | [flare-core-sdk](https://github.com/flare-im/flare-core-sdk) |
 | Understand the Rust client engine | [flare-core-sdk-engine](https://github.com/flare-im/flare-core-sdk-engine) |
 | Reuse the interface language | [flare-im-design](https://github.com/flare-im/flare-im-design) |
-| Try a web reference app | [flare-core-web-demo](https://github.com/flare-im/flare-core-web-demo) |
-| Try desktop with Tauri | [flare-core-tauri-demo](https://github.com/flare-im/flare-core-tauri-demo) |
-| Try mobile foundations | [flare-core-ios-demo](https://github.com/flare-im/flare-core-ios-demo), [flare-core-android-demo](https://github.com/flare-im/flare-core-android-demo), [flare-core-flutter-demo](https://github.com/flare-im/flare-core-flutter-demo) |
+| Try a web reference app | [Web example](https://github.com/flare-im/flare-core-examples/tree/main/apps/flare-core-web-app) |
+| Try desktop with Tauri | [Tauri example](https://github.com/flare-im/flare-core-examples/tree/main/apps/flare-core-tauri-app) |
+| Try mobile foundations | [iOS](https://github.com/flare-im/flare-core-examples/tree/main/apps/flare-core-ios-app), [Android](https://github.com/flare-im/flare-core-examples/tree/main/apps/flare-core-android-app), [Flutter](https://github.com/flare-im/flare-core-examples/tree/main/apps/flare-core-flutter-app) |
+| Develop a Flare plugin | [Flare Plugin DevKit](https://github.com/flare-im/flare-plugin-devkit) |
+| Browse plugin metadata | [Flare Plugin Catalog](https://github.com/flare-im/flare-plugin-catalog) |
 
 ## Engineering Principles
 
