@@ -14,13 +14,13 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/flare-im/flare-core">Transport</a>
+  <a href="https://github.com/flare-im/flare-transport">Transport</a>
   ·
-  <a href="https://github.com/flare-im/flare-im-core-server">Server</a>
+  <a href="https://github.com/flare-im/flare-core-server">Server</a>
   ·
-  <a href="https://github.com/flare-im/flare-im-core-sdk">Client core</a>
+  <a href="https://github.com/flare-im/flare-core-sdk-engine">Client core</a>
   ·
-  <a href="https://github.com/flare-im/flare-im-core-client-sdk">SDKs</a>
+  <a href="https://github.com/flare-im/flare-core-sdk">SDKs</a>
   ·
   <a href="https://github.com/flare-im/flare-im-design">Design</a>
 </p>
@@ -41,20 +41,21 @@ The current project is organized around a few firm boundaries:
 
 | Layer | Public Repository | Responsibility |
 | --- | --- | --- |
-| Wire | [flare-core](https://github.com/flare-im/flare-core) | Transport foundations for QUIC/WebSocket connections and service discovery. |
-| Contract | [flare-proto](https://github.com/flare-im/flare-proto), [flare-grpc-proto](https://github.com/flare-im/flare-grpc-proto) | Protocol contracts for DDD/CQRS services and generated integration surfaces. |
-| Server | [flare-im-core-server](https://github.com/flare-im/flare-im-core-server) | Messaging, session, sync, storage, media, delivery, and fanout services. |
-| Client core | [flare-im-core-sdk](https://github.com/flare-im/flare-im-core-sdk) | Rust client engine for reliable send, sync convergence, ordering, and local state. |
-| SDK surface | [flare-im-core-client-sdk](https://github.com/flare-im/flare-im-core-client-sdk) | TypeScript, Swift, Kotlin, Dart, Flutter, HarmonyOS, and example app packages. |
+| Wire | [flare-transport](https://github.com/flare-im/flare-transport) | Transport foundations for QUIC/WebSocket connections and service discovery. |
+| Contract | [flare-protocol](https://github.com/flare-im/flare-protocol), [flare-protocol-grpc](https://github.com/flare-im/flare-protocol-grpc) | Protocol contracts for DDD/CQRS services and generated integration surfaces. |
+| Server | [flare-core-server](https://github.com/flare-im/flare-core-server) | Messaging, session, sync, storage, media, delivery, and fanout services. |
+| Server runtime | [flare-server-runtime](https://github.com/flare-im/flare-server-runtime) | Shared server infrastructure used by the Core services. |
+| Client core | [flare-core-sdk-engine](https://github.com/flare-im/flare-core-sdk-engine) | Rust client engine for reliable send, sync convergence, ordering, and local state. |
+| SDK surface | [flare-core-sdk](https://github.com/flare-im/flare-core-sdk) | TypeScript, Swift, Kotlin, Dart, Flutter, HarmonyOS, and example app packages. |
 | Experience | [flare-im-design](https://github.com/flare-im/flare-im-design) | Cross-platform IM UI kit, shared tokens, and native component implementations. |
 
 ## Start By Intent
 
 | If You Want To... | Start Here |
 | --- | --- |
-| Inspect the realtime server path | [flare-im-core-server](https://github.com/flare-im/flare-im-core-server) |
-| Build against the client SDK contract | [flare-im-core-client-sdk](https://github.com/flare-im/flare-im-core-client-sdk) |
-| Understand the Rust client engine | [flare-im-core-sdk](https://github.com/flare-im/flare-im-core-sdk) |
+| Inspect the realtime server path | [flare-core-server](https://github.com/flare-im/flare-core-server) |
+| Build against the client SDK contract | [flare-core-sdk](https://github.com/flare-im/flare-core-sdk) |
+| Understand the Rust client engine | [flare-core-sdk-engine](https://github.com/flare-im/flare-core-sdk-engine) |
 | Reuse the interface language | [flare-im-design](https://github.com/flare-im/flare-im-design) |
 | Try a web reference app | [flare-core-web-demo](https://github.com/flare-im/flare-core-web-demo) |
 | Try desktop with Tauri | [flare-core-tauri-demo](https://github.com/flare-im/flare-core-tauri-demo) |
