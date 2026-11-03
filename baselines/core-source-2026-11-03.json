@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "core-source-2026-11-03",
+  "status": "source-baseline",
+  "repositories": [
+    {
+      "repository": "https://github.com/flare-im/flare-transport.git",
+      "directory": "flare-transport",
+      "revision": "4242ee73efac8703ed20980cc50ba099260afebc",
+      "role": "Realtime transport"
+    },
+    {
+      "repository": "https://github.com/flare-im/flare-protocol.git",
+      "directory": "flare-protocol",
+      "revision": "8ce85f0eb561f376d881fde035dbca7bd83c4296",
+      "role": "Core protocol"
+    },
+    {
+      "repository": "https://github.com/flare-im/flare-protocol-grpc.git",
+      "directory": "flare-protocol-grpc",
+      "revision": "71796d22c3c10f4abb0315c975296b317cb13c7a",
+      "role": "Service RPC contracts"
+    },
+    {
+      "repository": "https://github.com/flare-im/flare-server-runtime.git",
+      "directory": "flare-server-runtime",
+      "revision": "641c832040eb5b01d9a2c20dbb3d6bcf0c5fefec",
+      "role": "Service runtime"
+    },
+    {
+      "repository": "https://github.com/flare-im/flare-core-server.git",
+      "directory": "flare-core-server",
+      "revision": "b7c0ad7c12d99754289a3122c6be21841ed0fad5",
+      "role": "Messaging services"
+    },
+    {
+      "repository": "https://github.com/flare-im/flare-core-sdk-engine.git",
+      "directory": "flare-core-sdk-engine",
+      "revision": "ab2129a0e4f8f6a543446976b0723e35d93a49c3",
+      "role": "Client engine and FFI"
+    },
+    {
+      "repository": "https://github.com/flare-im/flare-core-sdk.git",
+      "directory": "flare-core-sdk",
+      "revision": "56fa691a9f3df9ece2944b33d04e6f7aab4e6d83",
+      "role": "Platform SDK packages"
+    },
+    {
+      "repository": "https://github.com/flare-im/flare-im-design.git",
+      "directory": "flare-im-design",
+      "revision": "558287b3dc2d72e973952b20a0a246cf664d8abd",
+      "role": "Cross-platform UI kit"
+    }
+  ]
+}

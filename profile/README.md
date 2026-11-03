@@ -25,6 +25,14 @@
   <a href="https://github.com/flare-im/flare-im-design">Design</a>
 </p>
 
+## Start Building / 开发入口
+
+- **Core messaging** — [Start the public server and run a message smoke check](https://github.com/flare-im/flare-core-server#flare-im-core) or [browse the reference apps](https://github.com/flare-im/flare-core-examples).
+- **Plugin development** — [Build your first gRPC or WASM plugin](https://github.com/flare-im/flare-plugin-devkit), starting with the [Echo example](https://github.com/flare-im/flare-plugin-devkit/blob/main/flare-plugin-host/examples/echo_plugin.rs). See the [public catalog](https://github.com/flare-im/flare-plugin-catalog) for metadata.
+- **Pinned Core sources** — [Source baseline and checkout instructions](https://github.com/flare-im/.github/blob/main/baselines/README.md).
+
+Core, the UI kit, and plugin development tools are open source. Flare Social and first-party commercial plugin implementations are maintained separately.
+
 ## Organization Focus
 
 Flare IM is building a reusable instant messaging stack where the realtime behavior is implemented once, tested close to the core, and exposed through platform-native SDKs. Product-specific social features, plugin capabilities, and app choices live above the core instead of leaking into transport or protocol contracts.
@@ -46,7 +54,7 @@ The current project is organized around a few firm boundaries:
 | Server | [flare-core-server](https://github.com/flare-im/flare-core-server) | Messaging, session, sync, storage, media, delivery, and fanout services. |
 | Server runtime | [flare-server-runtime](https://github.com/flare-im/flare-server-runtime) | Shared server infrastructure used by the Core services. |
 | Client core | [flare-core-sdk-engine](https://github.com/flare-im/flare-core-sdk-engine) | Rust client engine for reliable send, sync convergence, ordering, and local state. |
-| SDK surface | [flare-core-sdk](https://github.com/flare-im/flare-core-sdk) | TypeScript, Swift, Kotlin, Dart, Flutter, HarmonyOS, and example app packages. |
+| SDK surface | [flare-core-sdk](https://github.com/flare-im/flare-core-sdk) | TypeScript, Swift, Kotlin, Dart, Flutter, and HarmonyOS packages. |
 | Experience | [flare-im-design](https://github.com/flare-im/flare-im-design) | Cross-platform IM UI kit, shared tokens, and native component implementations. |
 
 ## Start By Intent
