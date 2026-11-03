@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>Realtime messaging infrastructure with one Rust behavior core and native SDK surfaces.</strong><br />
-  一套以 Rust Core 为中心的即时通讯基础设施: 服务端微服务、客户端引擎、七端 SDK、跨端 UI Kit。
+  Server microservices, SDKs for seven platforms, and a cross-platform UI kit.
 </p>
 
 <p align="center">
@@ -25,7 +25,7 @@
   <a href="https://github.com/flare-im/flare-im-design">Design</a>
 </p>
 
-## Start Building / 开发入口
+## Start Building
 
 - **Core messaging** — [Start the public server and run a message smoke check](https://github.com/flare-im/flare-core-server#flare-im-core) or [browse the reference apps](https://github.com/flare-im/flare-core-examples).
 - **Plugin development** — [Build your first gRPC or WASM plugin](https://github.com/flare-im/flare-plugin-devkit), starting with the [Echo example](https://github.com/flare-im/flare-plugin-devkit/blob/main/flare-plugin-host/examples/echo_plugin.rs). See the [public catalog](https://github.com/flare-im/flare-plugin-catalog) for metadata.
