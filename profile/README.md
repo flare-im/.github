@@ -4,6 +4,8 @@
 
 <h1 align="center">flare.im</h1>
 
+<p align="center">English · <a href="https://github.com/flare-im/.github/blob/main/profile/README.zh-CN.md">Simplified Chinese</a></p>
+
 <p align="center">
   <strong>Realtime messaging infrastructure with one Rust behavior core and native SDK surfaces.</strong><br />
   Server microservices, SDKs for seven platforms, and a cross-platform UI kit.
